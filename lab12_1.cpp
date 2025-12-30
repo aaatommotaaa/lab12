@@ -2,16 +2,7 @@
 #include<ctime>
 using namespace std;
 
-long long int fibonacci(long long int x){
-    if (x>1){
-        long long int y = fibonacci(x-1)+ fibonacci(x-2);
-        return y;
-    } else if (x==1){
-        return 1;
-    } else {
-        return 0;
-    }
-}
+long long int fibonacci(long long int);
 
 int main(){
     clock_t start = clock();
@@ -22,4 +13,13 @@ int main(){
     return 0;
 }
 
-int fibonacci(int);
+long long int fibonacci(long long int x){
+    if (x>1){
+        long long int y = fibonacci(x-1)+ fibonacci(x-2);
+        return y;
+    } else if (x==1){
+        return 1;
+    } else {
+        return 0;
+    }
+}
